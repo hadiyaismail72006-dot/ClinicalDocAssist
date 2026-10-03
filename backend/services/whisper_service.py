@@ -83,11 +83,42 @@ def _to_wav16k(src_path: str) -> str:
 
 # ── Public API ───────────────────────────────────────────────────────────────
 
+def _transcribe_gemini(wav_path: str) -> str | None:
+    """
+    High-accuracy medical audio transcription using Gemini 3.5 Transcribe.
+    Returns plain text or None if unavailable.
+    """
+    try:
+        from services import gemini_service
+        from google.genai import types
+
+        with open(wav_path, "rb") as f:
+            wav_bytes = f.read()
+
+        part = types.Part.from_bytes(data=wav_bytes, mime_type="audio/wav")
+        resp = gemini_service.client.models.generate_content(
+            model="gemini-3.5-transcribe",
+            contents=[part],
+        )
+        for p in resp.candidates[0].content.parts:
+            if hasattr(p, "audio_transcription") and p.audio_transcription:
+                text = getattr(p.audio_transcription, "text", "")
+                if text and text.strip():
+                    return text.strip()
+            if hasattr(p, "text") and p.text and p.text.strip():
+                return p.text.strip()
+    except Exception as ex:
+        import traceback
+        logger.error("[transcribe] Gemini audio transcription error: %s\n%s", ex, traceback.format_exc())
+    return None
+
+
 def transcribe_path(path: str) -> str:
     """
-    Transcribe an audio file.
-    1. Converts to 16 kHz mono WAV (fast, in-process).
-    2. Runs faster-whisper with beam_size=3 + VAD.
+    Transcribe an audio file with maximum accuracy:
+    1. Converts input audio to 16 kHz mono WAV.
+    2. Primary: Gemini 3.5 Transcribe (state-of-the-art medical speech model).
+    3. Standby fallback: Local faster-whisper (small, beam_size=3, VAD).
     Returns plain text.
     """
     wav_path = None
@@ -96,7 +127,15 @@ def transcribe_path(path: str) -> str:
         wav_path = _to_wav16k(path)
         logger.info("[TIMING] audio_conversion=%.2fs", time.perf_counter() - t0)
 
+        # ── Primary: Gemini 3.5 Transcribe
         t1 = time.perf_counter()
+        gemini_text = _transcribe_gemini(wav_path)
+        if gemini_text:
+            logger.info("[TIMING] gemini_transcription=%.2fs", time.perf_counter() - t1)
+            return gemini_text
+
+        # ── Fallback: Local faster-whisper
+        t2 = time.perf_counter()
         segments, info = _model.transcribe(
             wav_path,
             beam_size=3,
@@ -105,8 +144,8 @@ def transcribe_path(path: str) -> str:
         )
         text = " ".join(s.text.strip() for s in segments if s.text.strip()).strip()
         logger.info(
-            "[TIMING] transcription=%.2fs (lang=%s, audio_dur=%.1fs)",
-            time.perf_counter() - t1,
+            "[TIMING] whisper_transcription=%.2fs (lang=%s, audio_dur=%.1fs)",
+            time.perf_counter() - t2,
             info.language,
             info.duration or 0,
         )

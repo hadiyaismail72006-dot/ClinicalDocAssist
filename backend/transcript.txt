@@ -1,1 +1,12 @@
-Okay. Hello doctor. Hello, how can I help you? I actually wrote this this morning. I am having serious stomach pain. Tell me where exactly the pain is. It is somewhat near the lower abdomen. Do you have any other symptoms? Not at all. What did you eat last night? I had a dinner party with friends in Minnesota. That's the reason. Don't worry. I'm prescribing these medicines. Take them regularly and avoid eating outside food. Thank you so much doctor. Take care. 
+Patient: Hello doctor.
+Doctor: Hello, how can I help you?
+Patient: Actually doctor, since morning I am having severe stomach pain.
+Doctor: Tell me where exactly the pain is?
+Patient: It is somewhat near the lower abdomen.
+Doctor: Do you have any other symptoms?
+Patient: No doctor.
+Doctor: What did you eat last night?
+Patient: I had a dinner party with friends in a restaurant.
+Doctor: That's the reason. Don't worry, I'm prescribing you some medicines. Take them regularly and avoid eating outside food.
+Patient: Thank you so much doctor.
+Doctor: Take care.
