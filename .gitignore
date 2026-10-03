@@ -1,0 +1,12 @@
+.env
+backend/.env
+venv/
+backend/venv/
+__pycache__/
+backend/__pycache__/
+*.pyc
+*.m4a
+result.txt
+backend/result.txt
+.vscode/
+.idea/

@@ -1,0 +1,57 @@
+brand_name,ingredients,strength,form,price
+# ============================================================
+# SAMPLE DATA — NOT OFFICIAL BRAND PRICES
+# Replace this file with a real brand medicine dataset.
+# Columns: brand_name, ingredients (pipe-separated if combo),
+#          strength, form, price (INR, MRP per tablet/unit)
+# ============================================================
+Crocin,paracetamol,500mg,tablet,2.50
+Crocin 650,paracetamol,650mg,tablet,3.50
+Crocin Suspension,paracetamol,125mg/5ml,syrup,55.00
+Dolo 650,paracetamol,650mg,tablet,3.20
+Tylenol 500,paracetamol,500mg,tablet,3.00
+Glucophage 500,metformin,500mg,tablet,7.00
+Glucophage 850,metformin,850mg,tablet,10.00
+Glycomet 500,metformin,500mg,tablet,6.50
+Glycomet 1000,metformin,1000mg,tablet,12.00
+Stamlo 5,amlodipine,5mg,tablet,9.00
+Stamlo 10,amlodipine,10mg,tablet,14.00
+Amlip 5,amlodipine,5mg,tablet,8.50
+Lipitor 10,atorvastatin,10mg,tablet,18.00
+Lipitor 20,atorvastatin,20mg,tablet,28.00
+Storvas 40,atorvastatin,40mg,tablet,40.00
+Atorva 10,atorvastatin,10mg,tablet,15.00
+Pan 40,pantoprazole,40mg,tablet,12.00
+Pantocid 40,pantoprazole,40mg,tablet,11.00
+Pan 20,pantoprazole,20mg,tablet,8.00
+Omez 20,omeprazole,20mg,capsule,9.00
+Mox 500,amoxicillin,500mg,capsule,16.00
+Mox 250,amoxicillin,250mg,capsule,10.00
+Zithromax 500,azithromycin,500mg,tablet,45.00
+Azithral 500,azithromycin,500mg,tablet,42.00
+Azithral 250,azithromycin,250mg,tablet,28.00
+Zyrtec 10,cetirizine,10mg,tablet,5.00
+Alerid 10,cetirizine,10mg,tablet,4.50
+Cosaar 50,losartan,50mg,tablet,12.00
+Losar 25,losartan,25mg,tablet,8.00
+Telma 40,telmisartan,40mg,tablet,14.00
+Telma 80,telmisartan,80mg,tablet,20.00
+Glimpid 1,glimepiride,1mg,tablet,8.00
+Glimpid 2,glimepiride,2mg,tablet,12.00
+Amaryl 2,glimepiride,2mg,tablet,15.00
+Glucovance MF,metformin|glimepiride,500mg/1mg,tablet,18.00
+Ecosprin 75,aspirin,75mg,tablet,3.50
+Ecosprin 150,aspirin,150mg,tablet,5.00
+Plavix 75,clopidogrel,75mg,tablet,20.00
+Deplatt 75,clopidogrel,75mg,tablet,18.00
+Montair 10,montelukast,10mg,tablet,22.00
+Singulair 10,montelukast,10mg,tablet,28.00
+Brufen 400,ibuprofen,400mg,tablet,6.00
+Combiflam,ibuprofen|paracetamol,400mg/325mg,tablet,8.00
+Vibramycin 100,doxycycline,100mg,capsule,18.00
+Ciplox 500,ciprofloxacin,500mg,tablet,20.00
+Electrol,sodium chloride|potassium chloride|sodium citrate|dextrose,standard,powder,40.00
+Pedialyte,sodium chloride|potassium chloride|sodium citrate|dextrose,standard,powder,45.00
+Imatnib,imatinib,400mg,tablet,4500.00
+Imatinib,imatinib,400mg,tablet,4500.00
+Gleevec,imatinib,400mg,tablet,5000.00

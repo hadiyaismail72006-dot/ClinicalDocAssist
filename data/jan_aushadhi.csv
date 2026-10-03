@@ -1,0 +1,42 @@
+generic_name,ingredients,strength,form,mrp
+# ============================================================
+# SAMPLE DATA — NOT OFFICIAL JAN AUSHADHI PRICES
+# Replace this file with the official Jan Aushadhi product list.
+# Columns: generic_name, ingredients (pipe-separated if combo),
+#          strength, form, mrp (INR)
+# ============================================================
+Paracetamol 500mg Tab,paracetamol,500mg,tablet,1.50
+Paracetamol 650mg Tab,paracetamol,650mg,tablet,2.00
+Paracetamol 125mg Syrup,paracetamol,125mg/5ml,syrup,18.00
+Metformin 500mg Tab,metformin,500mg,tablet,2.50
+Metformin 850mg Tab,metformin,850mg,tablet,3.50
+Metformin 1000mg Tab,metformin,1000mg,tablet,4.50
+Amlodipine 5mg Tab,amlodipine,5mg,tablet,1.80
+Amlodipine 10mg Tab,amlodipine,10mg,tablet,2.50
+Atorvastatin 10mg Tab,atorvastatin,10mg,tablet,3.00
+Atorvastatin 20mg Tab,atorvastatin,20mg,tablet,4.00
+Atorvastatin 40mg Tab,atorvastatin,40mg,tablet,6.00
+Pantoprazole 40mg Tab,pantoprazole,40mg,tablet,3.50
+Pantoprazole 20mg Tab,pantoprazole,20mg,tablet,2.50
+Omeprazole 20mg Cap,omeprazole,20mg,capsule,2.00
+Amoxicillin 500mg Cap,amoxicillin,500mg,capsule,5.00
+Amoxicillin 250mg Cap,amoxicillin,250mg,capsule,3.50
+Azithromycin 500mg Tab,azithromycin,500mg,tablet,10.00
+Azithromycin 250mg Tab,azithromycin,250mg,tablet,7.00
+Cetirizine 10mg Tab,cetirizine,10mg,tablet,1.00
+Losartan 50mg Tab,losartan,50mg,tablet,3.00
+Losartan 25mg Tab,losartan,25mg,tablet,2.00
+Telmisartan 40mg Tab,telmisartan,40mg,tablet,3.50
+Telmisartan 80mg Tab,telmisartan,80mg,tablet,5.00
+Glimepiride 1mg Tab,glimepiride,1mg,tablet,2.00
+Glimepiride 2mg Tab,glimepiride,2mg,tablet,3.00
+Metformin+Glimepiride 500/1mg Tab,metformin|glimepiride,500mg/1mg,tablet,4.50
+Aspirin 75mg Tab,aspirin,75mg,tablet,0.80
+Aspirin 150mg Tab,aspirin,150mg,tablet,1.20
+Clopidogrel 75mg Tab,clopidogrel,75mg,tablet,4.00
+Montelukast 10mg Tab,montelukast,10mg,tablet,5.00
+Ibuprofen 400mg Tab,ibuprofen,400mg,tablet,2.00
+Doxycycline 100mg Cap,doxycycline,100mg,capsule,4.00
+Ciprofloxacin 500mg Tab,ciprofloxacin,500mg,tablet,4.50
+ORS Powder,sodium chloride|potassium chloride|sodium citrate|dextrose,standard,powder,15.00
+Imatinib 400mg Tab,imatinib,400mg,tablet,35.00

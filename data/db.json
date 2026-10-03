@@ -1,0 +1,1134 @@
+{
+  "doctors": {
+    "D101": {
+      "doctor_id": "D101",
+      "doctor_name": "Dr. Sarah",
+      "pw_hash": "scrypt:32768:8:1$OZ2I48Fv3xJEDamB$028c8b7517ae96af490e8244d938ac689af4af976ca0baee8fee4dc15dfc7c531e278c78db4fa70fafcadc54c8cc500482b31d74c991dbcd78ea5c5ce3a7d1d6"
+    },
+    "D102": {
+      "doctor_id": "D102",
+      "doctor_name": "Dr. Arjun",
+      "pw_hash": "scrypt:32768:8:1$sbxCDx8txCOiqu0D$0f6013b7d0bfb1be5132b5deee37195d57ec728298b462654b254b97fbf8556b096a2e8b981f77a9f5c385cc319072385d24d7bc596fad9e36b67f1f34ffed67"
+    },
+    "D103": {
+      "doctor_id": "D103",
+      "doctor_name": "Dr. Meera",
+      "pw_hash": "scrypt:32768:8:1$nOx3P2yid6SqKkm1$b5c71cbf934b5254aa2cc092b28e2238d9276664aef2cea55b859008c23a7bab6b678b2b5c794fe730ddc0e0cbc45a7096b64cf243d185a6257f9bc2208183af"
+    },
+    "123": {
+      "doctor_id": "123",
+      "doctor_name": "shaza",
+      "pw_hash": "scrypt:32768:8:1$WxHyoczK2BmN539o$e7ec35dcfb4b49c0f4ad60224bf3e5d7f35568672771080b3819345362581e4b9091483a4a61d88f3860ce08e762858fd01a531d6635ad59dfc3af2cb8e09e33"
+    },
+    "101": {
+      "doctor_id": "101",
+      "doctor_name": "Aaditi sandeep",
+      "pw_hash": "scrypt:32768:8:1$09vmMJBBFyDt2KCr$380a8557eacbe1ea60100750bfdd23c411a55707a8f49b418a65319fb2c5b5522f792c1b5bd87a399aa880e6e54eb3894b18a4e3bc280695e84bfb750c925b3e"
+    },
+    "111": {
+      "doctor_id": "111",
+      "doctor_name": "Nazhwa",
+      "pw_hash": "scrypt:32768:8:1$hY0ELcFSQSCALY0L$909e140fd059eaaf9d8d35034f19ee88afb6f510bf0a6ef50de678f827046d037861f267eb501fd3102752cb157a2f92daa551faf353d2920d707a19a6bca133"
+    }
+  },
+  "patients": {
+    "001": {
+      "patient_id": "001",
+      "doctor_id": "D101",
+      "key_hash": "scrypt:32768:8:1$MlpMbuKmADS3YmtD$d51edbb4cb0b749b4dc4d345871fe14561ed96a09fb17214b79d9b3c321ee4b390691d78cab103ce8950cc211bcec3c67b24bf88f0df72e14a57d1052e07a2ac"
+    },
+    "0011": {
+      "patient_id": "0011",
+      "doctor_id": "123",
+      "key_hash": "scrypt:32768:8:1$O7BmPoas9woQzI40$9cf2de73de7326402dc974fa728bf4f5a3281abae0aa660665177379560ed8dee6fec8e11558dcc65d8fa1c1f1ae812bc1c887740de59e66845c7e64011e8f0d"
+    },
+    "1": {
+      "patient_id": "1",
+      "doctor_id": "101",
+      "key_hash": "scrypt:32768:8:1$vrp2XFp4ZxfWq0SS$135d4dd0611f38d67c906cf26d191c2fb8e3d42c1a6bc256be39d9d3fc491932321181847dfa00bc3b60c7286287ca4c45d0129a633ae01f56b3a5be0dcebf60"
+    },
+    "2": {
+      "patient_id": "2",
+      "doctor_id": "101",
+      "key_hash": null
+    },
+    "105": {
+      "patient_id": "105",
+      "doctor_id": "101",
+      "key_hash": "scrypt:32768:8:1$xsVz2gBOdin3a0BI$c4b7a3fe9a9d7888182acf1cd6f1097f71f3a009c02a5f42c742a780a9bb76d2713acf49375fbdcf9ed7b7d0cdc1b420b7e9ba56d6a4d77f4b213475b7dfc783"
+    },
+    "104": {
+      "patient_id": "104",
+      "doctor_id": "101",
+      "key_hash": null
+    },
+    "107": {
+      "patient_id": "107",
+      "doctor_id": "101",
+      "key_hash": "scrypt:32768:8:1$T6F3v0bbY8Eu4d14$5eb905cb526f0cef7b51c7b153de28b4fbc7898c237f29c3ed3fab094254b0a38c7350168a438aa061b98c79536119ad71c1e439bde9b3b5820c291aa6b10978"
+    },
+    "121": {
+      "patient_id": "121",
+      "doctor_id": "111",
+      "key_hash": "scrypt:32768:8:1$6PrRy53ltR330eVy$c82bfcc09cc856dff61476dcd525c77d7071d284dffc5228ce0eab49ab593bf32dfc28b59f4c50ab2394b09b79d619b3442928f595e43607771156915ec28bc8"
+    },
+    "12": {
+      "patient_id": "12",
+      "doctor_id": "111",
+      "key_hash": "scrypt:32768:8:1$2hbpo8pAAkoyDTkc$f9e8d8b983e6ff9b4dd1e4674fc99b03f1883aa04471a392cf26a11ef86be1a2084472e197a3f82ffd1628f24620761b188b055c1662e57ec4d9180e45030b95"
+    },
+    "122": {
+      "patient_id": "122",
+      "doctor_id": "111",
+      "key_hash": "scrypt:32768:8:1$tUGmLKSWV3hSn6sn$e85fd6a17196230925164a99bccfb00e8b7a452bb66eacfe44b70dfe778cbb59ba0e498ef9992843853e03f4a8dc64f879afaa2dfd0c4781079a9ea48cdebb09"
+    }
+  },
+  "consultations": {
+    "3i8wIsj8Mx7l_g": {
+      "id": "3i8wIsj8Mx7l_g",
+      "patient_id": "001",
+      "doctor_name": "Dr. Sarah",
+      "status": "approved",
+      "transcript": "I have fever. I have stomach pain. Excuse me, some medications please.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Not discussed",
+        "chief_complaint": "Fever and stomach pain",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with complaints of fever and stomach pain.",
+        "medications": [],
+        "missing_information": [
+          "Duration and severity of fever",
+          "Duration, location, and character of stomach pain",
+          "Past medical history",
+          "Current medications and allergies",
+          "Physical examination findings",
+          "Diagnosis and specific treatment plan"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "Fever",
+          "Stomach pain"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You visited the clinic because you have a fever and pain in your stomach. Your note records that you shared these symptoms during your visit. Other details and a final diagnosis were not discussed in this record.",
+        "what_the_doctor_found": "The doctor noted your symptoms of fever and stomach pain. A physical exam and diagnosis were not discussed in the note.",
+        "medicines": [],
+        "what_to_do": [],
+        "warning_signs": [],
+        "follow_up": "A follow-up visit was not discussed in this note."
+      },
+      "created_at": "2026-10-02T14:03:49.954760+00:00"
+    },
+    "nncanFOHUaiUBA": {
+      "id": "nncanFOHUaiUBA",
+      "patient_id": "0011",
+      "doctor_name": "shaza",
+      "status": "approved",
+      "transcript": "Hi doctor. Hi patient. What is the suffering problem? I have a serious stomach pain. I feel I used to have it nice. Who are you? I am a father in India.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Not discussed",
+        "chief_complaint": "Stomach pain",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with serious stomach pain.",
+        "medications": [],
+        "missing_information": [
+          "Speaker identities are unclear (\"Who are you? I am a father in India\").",
+          "Duration, location, severity, and character of stomach pain were not discussed.",
+          "Past medical history, medications, allergies, examination findings, assessment, plan, and follow-up were not discussed."
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "Stomach pain"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You reported having serious stomach pain during this visit. Further details about your pain and medical history were not discussed in the note. A full medical plan was not recorded at this time.",
+        "what_the_doctor_found": "The doctor noted your serious stomach pain, but an exam and assessment were not discussed.",
+        "medicines": [],
+        "what_to_do": [],
+        "warning_signs": [],
+        "follow_up": "A follow-up visit was not discussed."
+      },
+      "created_at": "2026-10-02T14:13:21.122068+00:00"
+    },
+    "ufo9a0DJjldw0Q": {
+      "id": "ufo9a0DJjldw0Q",
+      "patient_id": "1",
+      "doctor_name": "Aaditi sandeep",
+      "status": "created",
+      "transcript": "",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-02T14:31:33.237678+00:00"
+    },
+    "ruQTfy9e54Gy1w": {
+      "id": "ruQTfy9e54Gy1w",
+      "patient_id": "2",
+      "doctor_name": "Aaditi sandeep",
+      "status": "created",
+      "transcript": "",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-02T14:37:13.233039+00:00"
+    },
+    "Wj5aDKR_sYbS6g": {
+      "id": "Wj5aDKR_sYbS6g",
+      "patient_id": "105",
+      "doctor_name": "Aaditi sandeep",
+      "status": "approved",
+      "transcript": "Good morning. Please have a seat. What brings you in today? Good morning, Doctor. I have been having a headache for the past three days. Can you describe the headache? Where exactly does it hurt? Mostly on both sides of my body. It feels like a constant pressure rather than a sharp pain. On a scale 1 to 10, how severe it is? Around 6 out of 10. When did it first start? It started three days ago. I've been getting it mostly in the afternoon and evening. Does anything make it better or worse? Resting in a quiet room helps a little. Looking at my laptop for a long time seems to make it worse. Have you experienced vomiting, blood, vision, fever, fever or dizziness? No, vomiting or fever. Sometimes my eyes feel tired, but I haven't had blood, vision or dizziness. Have you taken any medication for it? I took one paracetamol tablet yesterday. It helped for a few hours, but the headache came back. Have you had headaches like this before? Occasionally, but they usually go away after few hours. This is the first time it has lasted for several days. How has your sleep been recently? Not very good. I've been sleeping around five to six hours because I've been working late on my laptop. How much water do you usually drink during the day? Probably around four or five glasses. I know that's probably not enough.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Headache lasting for several days, possibly tension-related, associated with screen time, poor sleep, and dehydration.",
+        "chief_complaint": "Headache for the past three days",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with a headache starting three days ago, occurring mostly in the afternoon and evening. The pain is located on both sides of the head and feels like a constant pressure with a severity of 6 out of 10. Resting in a quiet room helps slightly, while looking at a laptop for a long time makes it worse. Patient denies vomiting, fever, blood, vision changes, or dizziness, though notes tired eyes. Patient took one paracetamol tablet yesterday which helped for a few hours. Sleep has been poor (5-6 hours per night due to working late on laptop) and water intake is low (4-5 glasses per day).",
+        "medications": [
+          {
+            "name": "Paracetamol",
+            "dose": "one tablet",
+            "frequency": "yesterday (as needed / single dose taken)"
+          }
+        ],
+        "missing_information": [
+          "Doctor's physical examination findings",
+          "Doctor's official assessment or diagnosis",
+          "Doctor's specific treatment plan or prescribed medications"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [
+          "Reduce  laptop use on bedtime"
+        ],
+        "symptoms": [
+          "Headache",
+          "Constant pressure on both sides of the head",
+          "Tired eyes",
+          "Poor sleep",
+          "Low water intake"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in with a headache that has lasted for the past three days, feeling like a constant pressure on both sides of your head. This is likely a tension headache related to too much screen time, not drinking enough water, and poor sleep.",
+        "what_the_doctor_found": "You have had a headache for three days, mostly in the afternoon and evening, which gets worse when looking at a laptop for a long time. You are also dealing with tired eyes, poor sleep, and low water intake.",
+        "medicines": [
+          {
+            "name": "Paracetamol",
+            "how_to_take": "One tablet was taken yesterday as needed and helped for a few hours."
+          }
+        ],
+        "what_to_do": [
+          "Reduce laptop use near bedtime",
+          "Rest in a quiet room if needed"
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "Paracetamol",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          }
+        ]
+      },
+      "created_at": "2026-10-02T16:43:54.157829+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Paracetamol",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        }
+      ]
+    },
+    "o2ydNKWzNCnyMA": {
+      "id": "o2ydNKWzNCnyMA",
+      "patient_id": "104",
+      "doctor_name": "Aaditi sandeep",
+      "status": "transcribed",
+      "transcript": "Good morning. What brings you in today? Good morning, Doctor. I have a headache and mild fever since yesterday. Do you have any cough, vomiting or dizziness? I have a slight cough, but no vomiting or dizziness. Have you taken any medication? I took one paracetamol tablet last night. Okay. I'll check your temperature and vital signs. For now, stay hydrated and get plenty of rest. Okay, Doctor. Thank you. You're welcome. We'll review your condition after the examination. Thank you.",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-02T17:11:50.005528+00:00"
+    },
+    "_6GAhNJHaC4GTA": {
+      "id": "_6GAhNJHaC4GTA",
+      "patient_id": "107",
+      "doctor_name": "Aaditi sandeep",
+      "status": "approved",
+      "transcript": "Good morning. What brings you in today? Good morning Doctor. I had a headache and mild fever since yesterday. Do you have any cough, vomiting or dizziness? I have a slight cough but no vomiting or dizziness. Have you taken any medication? I took one paracetamol tablet last night. Okay. I'll check your temperature and vital signs. For now, stay hydrated and get plenty of rest. Okay Doctor. Thank you. You're welcome. We'll review your condition after the examination.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Not discussed",
+        "chief_complaint": "Headache and mild fever since yesterday",
+        "examination_findings": "Not discussed",
+        "follow_up": "Review condition after the examination",
+        "history_of_present_illness": "The patient reports a headache and mild fever that began yesterday. They also report having a slight cough, but deny vomiting or dizziness. The patient self-administered one paracetamol tablet last night.",
+        "medications": [
+          {
+            "name": "Paracetamol",
+            "dose": "one tablet",
+            "frequency": "Not stated"
+          }
+        ],
+        "missing_information": [
+          "Strength/dosage of the paracetamol tablet taken",
+          "Objective vital signs and temperature results (examination pending)"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [
+          "Check temperature and vital signs",
+          "Stay hydrated",
+          "Get plenty of rest",
+          "Review condition after examination"
+        ],
+        "symptoms": [
+          "Headache",
+          "Mild fever",
+          "Slight cough"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in because you have had a headache, a mild fever, and a slight cough since yesterday. To help you feel better, the plan is to rest, drink plenty of fluids, and check your vital signs. We will then see how you are doing.",
+        "what_the_doctor_found": "You have a headache, a mild fever, and a slight cough that started yesterday. You also mentioned you do not have vomiting or dizziness.",
+        "medicines": [
+          {
+            "name": "Paracetamol",
+            "how_to_take": "One tablet was taken last night."
+          }
+        ],
+        "what_to_do": [
+          "Check your temperature and vital signs",
+          "Stay hydrated by drinking plenty of fluids",
+          "Get plenty of rest"
+        ],
+        "warning_signs": [],
+        "follow_up": "Review your condition after the examination.",
+        "generic_suggestions": [
+          {
+            "brand_name": "Paracetamol",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          }
+        ]
+      },
+      "created_at": "2026-10-02T17:22:43.610727+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Paracetamol",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        }
+      ]
+    },
+    "R1cMHdTKqjVamQ": {
+      "id": "R1cMHdTKqjVamQ",
+      "patient_id": "1",
+      "doctor_name": "Aaditi sandeep",
+      "status": "transcribed",
+      "transcript": "I have speedwear, hair cut, I have nausea, I have moccasin. Okay, take paracetamol twice a day.",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-02T17:46:25.448119+00:00"
+    },
+    "gBt81o4y07WplA": {
+      "id": "gBt81o4y07WplA",
+      "patient_id": "1",
+      "doctor_name": "Aaditi sandeep",
+      "status": "approved",
+      "transcript": "I have nausea and headache. Okay, take paracetamol.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Not discussed",
+        "chief_complaint": "Nausea and headache",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with nausea and headache.",
+        "medications": [
+          {
+            "name": "paracetamol",
+            "dose": "Not stated",
+            "frequency": "Not stated"
+          }
+        ],
+        "missing_information": [
+          "Duration and severity of nausea and headache",
+          "Dose and frequency of paracetamol",
+          "Speaker attribution was inferred from context"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [
+          "Take paracetamol"
+        ],
+        "symptoms": [
+          "nausea",
+          "headache"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you are feeling sick to your stomach, also known as nausea, and have a head pain, known as a headache. We are going to help you feel better with some simple steps.",
+        "what_the_doctor_found": "You are dealing with nausea (feeling like you need to throw up) and a headache.",
+        "medicines": [
+          {
+            "name": "paracetamol",
+            "how_to_take": "Take as discussed."
+          }
+        ],
+        "what_to_do": [
+          "Take paracetamol."
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "paracetamol",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          }
+        ]
+      },
+      "created_at": "2026-10-02T17:47:31.455404+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "paracetamol",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        }
+      ]
+    },
+    "aEm0i8zWWbIQdg": {
+      "id": "aEm0i8zWWbIQdg",
+      "patient_id": "1",
+      "doctor_name": "Aaditi sandeep",
+      "status": "approved",
+      "transcript": "I have a fever, Doctor. I am so unwell. Take paracetamol twice a day.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Fever",
+        "chief_complaint": "Fever and feeling unwell",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with a fever and reports feeling very unwell.",
+        "medications": [
+          {
+            "name": "paracetamol",
+            "dose": "Not stated",
+            "frequency": "twice a day"
+          }
+        ],
+        "missing_information": [
+          "Duration and severity of the fever",
+          "Other associated symptoms",
+          "Past medical history and allergies"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [
+          "Take paracetamol twice a day"
+        ],
+        "symptoms": [
+          "Fever",
+          "Feeling unwell"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in because you have a fever and are feeling very unwell. We want to help you feel better by resting and taking your medicine. Follow the steps below to take care of yourself.",
+        "what_the_doctor_found": "You have a fever and are feeling unwell.",
+        "medicines": [
+          {
+            "name": "paracetamol",
+            "how_to_take": "Take twice a day"
+          }
+        ],
+        "what_to_do": [
+          "Take paracetamol twice a day"
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "paracetamol",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          }
+        ]
+      },
+      "created_at": "2026-10-02T17:49:09.489504+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "paracetamol",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        }
+      ]
+    },
+    "nNmXTsnpq9JXsQ": {
+      "id": "nNmXTsnpq9JXsQ",
+      "patient_id": "121",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "Good evening. Good evening, Doctor. How are you doing? I'm having severe headache since you're still married. Did you take any medication? No, I didn't take any medication. Alright, then take a parcidoma and rest well. Okay, Doctor, thank you so much.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Severe headache",
+        "chief_complaint": "Severe headache",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with a severe headache. No medication has been taken for it.",
+        "medications": [
+          {
+            "name": "paracetamol",
+            "dose": "Not discussed",
+            "frequency": "Not discussed"
+          }
+        ],
+        "missing_information": [
+          "Past medical history",
+          "Allergies",
+          "Examination findings",
+          "Follow-up details",
+          "Exact dosage and frequency for parcidoma"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [
+          "Take a paracetamol",
+          "Rest well"
+        ],
+        "symptoms": [
+          "Severe headache"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you have a severe headache, which is a very strong pain in your head. The doctor suggests taking some medicine and getting plenty of rest to help you feel better.",
+        "what_the_doctor_found": "You are experiencing a severe headache.",
+        "medicines": [
+          {
+            "name": "paracetamol",
+            "how_to_take": "Take as directed"
+          }
+        ],
+        "what_to_do": [
+          "Take a paracetamol",
+          "Rest well"
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "paracetamol",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          }
+        ]
+      },
+      "created_at": "2026-10-02T21:19:46.871102+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "paracetamol",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        }
+      ]
+    },
+    "E8cmp0XB7vXNmw": {
+      "id": "E8cmp0XB7vXNmw",
+      "patient_id": "121",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "How are you doing? I have a fever and I have a headache, a day take a person or an breast.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Not discussed",
+        "chief_complaint": "Fever and headache",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with a fever and headache for a day.",
+        "medications": [],
+        "missing_information": [
+          "Speaker identification is unclear",
+          "Vital signs and physical exam",
+          "Past medical history",
+          "Allergies",
+          "Current medications",
+          "Assessment and plan"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "fever",
+          "headache"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in because you have had a fever (high body temperature) and a headache for a day. We want to help you feel better soon. Please review the details below.",
+        "what_the_doctor_found": "You reported having a fever and a headache for one day.",
+        "medicines": [],
+        "what_to_do": [],
+        "warning_signs": [],
+        "follow_up": "Not discussed"
+      },
+      "created_at": "2026-10-02T21:30:00.011360+00:00"
+    },
+    "uZbzOlFjdInLOw": {
+      "id": "uZbzOlFjdInLOw",
+      "patient_id": "001",
+      "doctor_name": "Dr. Sarah",
+      "status": "approved",
+      "transcript": "Doctor: I am prescribing Crocin 500mg tablet twice daily for fever and Pan 40 tablet once daily before breakfast.",
+      "note": {
+        "allergies": "None",
+        "medications": [
+          {
+            "frequency": "twice daily",
+            "dose": "500mg",
+            "name": "Crocin"
+          },
+          {
+            "frequency": "once daily",
+            "dose": "40mg",
+            "name": "Pan 40"
+          }
+        ],
+        "chief_complaint": "Fever and acidity",
+        "history_of_present_illness": "Patient has mild fever and acidity.",
+        "follow_up": "3 days",
+        "examination_findings": "Stable",
+        "plan": [
+          "Crocin 500mg",
+          "Pan 40"
+        ],
+        "symptoms": [
+          "Fever",
+          "Acidity"
+        ],
+        "past_medical_history": "None",
+        "missing_information": [],
+        "assessment": "Viral fever with gastritis"
+      },
+      "patient_summary": {
+        "summary": "You came in with a mild fever and acidity, which the doctor calls a viral fever with gastritis (stomach irritation). Your overall condition is stable, and you should start feeling better soon with your medicines.",
+        "what_the_doctor_found": "Viral fever with gastritis (stomach irritation)",
+        "medicines": [
+          {
+            "name": "Crocin 500mg",
+            "how_to_take": "twice daily"
+          },
+          {
+            "name": "Pan 40",
+            "how_to_take": "once daily"
+          }
+        ],
+        "what_to_do": [
+          "Take your prescribed medicines as directed"
+        ],
+        "warning_signs": [],
+        "follow_up": "3 days",
+        "generic_suggestions": [
+          {
+            "brand_name": "Crocin",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          },
+          {
+            "brand_name": "Pan 40",
+            "brand_price": 12.0,
+            "generic_name": "Pantoprazole 40mg Tab",
+            "generic_price": 3.5,
+            "saving_rs": 8.5,
+            "saving_pct": 70.8
+          }
+        ]
+      },
+      "created_at": "2026-10-02T22:05:39.239622+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Crocin",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        },
+        {
+          "brand_name": "Pan 40",
+          "brand_price": 12.0,
+          "generic_name": "Pantoprazole 40mg Tab",
+          "generic_price": 3.5,
+          "saving_rs": 8.5,
+          "saving_pct": 70.8
+        }
+      ]
+    },
+    "sB19sc1l1uJGaw": {
+      "id": "sB19sc1l1uJGaw",
+      "patient_id": "121",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "So I got the old, most overrated cancer. So I want to listen for skin cancer.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Patient concerned about skin cancer",
+        "chief_complaint": "Wants to listen for skin cancer",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient states they have skin cancer and wants to listen for it.",
+        "medications": [
+          {
+            "name": "Imatinib",
+            "dose": "400 mg",
+            "frequency": "2"
+          }
+        ],
+        "missing_information": [
+          "Specific symptoms",
+          "History of present illness details",
+          "Past medical history",
+          "Medications",
+          "Allergies",
+          "Examination findings",
+          "Plan",
+          "Follow-up"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "skin cancer"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you were concerned about skin cancer and wanted to check for it. We reviewed your current medicine to help keep you on track. Please continue taking your prescribed treatment as directed.",
+        "what_the_doctor_found": "You expressed concern and wanted to check for skin cancer.",
+        "medicines": [
+          {
+            "name": "Imatinib 400 mg",
+            "how_to_take": "Take 2 times"
+          }
+        ],
+        "what_to_do": [
+          "Continue taking your Imatinib as prescribed."
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "Imatinib",
+            "brand_price": 4500.0,
+            "generic_name": "Imatinib 400mg Tab",
+            "generic_price": 35.0,
+            "saving_rs": 4465.0,
+            "saving_pct": 99.2
+          }
+        ]
+      },
+      "created_at": "2026-10-02T22:13:34.784398+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Imatinib",
+          "brand_price": 4500.0,
+          "generic_name": "Imatinib 400mg Tab",
+          "generic_price": 35.0,
+          "saving_rs": 4465.0,
+          "saving_pct": 99.2
+        }
+      ]
+    },
+    "NzgbJh8phuvDgw": {
+      "id": "NzgbJh8phuvDgw",
+      "patient_id": "121",
+      "doctor_name": "Nazhwa",
+      "status": "created",
+      "transcript": "",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-02T22:17:45.876102+00:00"
+    },
+    "jr8E7jDhHrIwtw": {
+      "id": "jr8E7jDhHrIwtw",
+      "patient_id": "121",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "I have a very bad headache and dizziness.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Headache and dizziness",
+        "chief_complaint": "Headache and dizziness",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with a very bad headache and dizziness.",
+        "medications": [
+          {
+            "name": "Imatinib",
+            "dose": "400mg",
+            "frequency": "2"
+          }
+        ],
+        "missing_information": [
+          "Duration and onset of headache and dizziness",
+          "Severity details",
+          "Associated symptoms",
+          "Past medical history",
+          "Current medications",
+          "Allergies",
+          "Examination findings",
+          "Treatment plan and follow-up"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "Headache",
+          "Dizziness"
+        ]
+      },
+      "patient_summary": {
+        "summary": "Hello! You came in today because you are dealing with a very bad headache and dizziness, which means feeling off-balance or lightheaded. We have reviewed your current medicine to help you feel better.",
+        "what_the_doctor_found": "You are experiencing a headache and dizziness.",
+        "medicines": [
+          {
+            "name": "Imatinib",
+            "how_to_take": "Take 400mg, 2 times."
+          }
+        ],
+        "what_to_do": [
+          "Take your medicine as directed."
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "Imatinib",
+            "brand_price": 4500.0,
+            "generic_name": "Imatinib 400mg Tab",
+            "generic_price": 35.0,
+            "saving_rs": 4465.0,
+            "saving_pct": 99.2
+          }
+        ]
+      },
+      "created_at": "2026-10-02T22:22:47.139475+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Imatinib",
+          "brand_price": 4500.0,
+          "generic_name": "Imatinib 400mg Tab",
+          "generic_price": 35.0,
+          "saving_rs": 4465.0,
+          "saving_pct": 99.2
+        }
+      ]
+    },
+    "6UzE6H_N1SDlnw": {
+      "id": "6UzE6H_N1SDlnw",
+      "patient_id": "121",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "Man headache and dizziness.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Headache and dizziness",
+        "chief_complaint": "Headache and dizziness",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with headache and dizziness.",
+        "medications": [
+          {
+            "name": "Imatnib",
+            "dose": "400 mg",
+            "frequency": "2"
+          }
+        ],
+        "missing_information": [
+          "Speaker identification",
+          "Duration and severity of symptoms",
+          "Past medical history",
+          "Current medications",
+          "Allergies",
+          "Examination findings",
+          "Plan and follow-up"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "Headache",
+          "Dizziness"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you are dealing with a headache (pain in your head) and dizziness (feeling like you might spin or faint). We have a plan to help you feel better with your medicine. Please review the details below.",
+        "what_the_doctor_found": "You are experiencing a headache and dizziness.",
+        "medicines": [
+          {
+            "name": "Imatnib 400 mg",
+            "how_to_take": "Take 2 times"
+          }
+        ],
+        "what_to_do": [],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "Imatnib",
+            "brand_price": 4500.0,
+            "generic_name": "Imatinib 400mg Tab",
+            "generic_price": 35.0,
+            "saving_rs": 4465.0,
+            "saving_pct": 99.2
+          }
+        ]
+      },
+      "created_at": "2026-10-02T22:25:25.979493+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Imatnib",
+          "brand_price": 4500.0,
+          "generic_name": "Imatinib 400mg Tab",
+          "generic_price": 35.0,
+          "saving_rs": 4465.0,
+          "saving_pct": 99.2
+        }
+      ]
+    },
+    "aM5QiEqx9GCbPQ": {
+      "id": "aM5QiEqx9GCbPQ",
+      "patient_id": "12",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "And very bad headache.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Headache",
+        "chief_complaint": "Very bad headache",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with a very bad headache.",
+        "medications": [
+          {
+            "name": "Imatnib",
+            "dose": "400 mg",
+            "frequency": "2"
+          }
+        ],
+        "missing_information": [
+          "Speaker is unclear",
+          "Duration and character of headache not discussed",
+          "Associated symptoms not discussed",
+          "Past medical history not discussed",
+          "Medications not discussed",
+          "Allergies not discussed",
+          "Examination findings not discussed",
+          "Plan not discussed",
+          "Follow-up not discussed"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "Headache"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you are having a very bad headache. We reviewed your current medicine to help manage this. Please follow the instructions below for your care.",
+        "what_the_doctor_found": "A headache (pain in your head).",
+        "medicines": [
+          {
+            "name": "Imatnib",
+            "how_to_take": "400 mg, 2 times"
+          }
+        ],
+        "what_to_do": [
+          "Take your medicine as prescribed."
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "Imatnib",
+            "brand_price": 4500.0,
+            "generic_name": "Imatinib 400mg Tab",
+            "generic_price": 35.0,
+            "saving_rs": 4465.0,
+            "saving_pct": 99.2
+          }
+        ]
+      },
+      "created_at": "2026-10-02T22:27:00.524097+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Imatnib",
+          "brand_price": 4500.0,
+          "generic_name": "Imatinib 400mg Tab",
+          "generic_price": 35.0,
+          "saving_rs": 4465.0,
+          "saving_pct": 99.2
+        }
+      ]
+    },
+    "QrNhJcbSkvZE-Q": {
+      "id": "QrNhJcbSkvZE-Q",
+      "patient_id": "122",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "Ladybad fever and headache.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Fever and headache",
+        "chief_complaint": "Fever and headache",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with fever and headache.",
+        "medications": [
+          {
+            "name": "Glycomet",
+            "dose": "500",
+            "frequency": "1"
+          }
+        ],
+        "missing_information": [
+          "Patient identity/Ladybad speaker context unclear",
+          "Duration and severity of symptoms",
+          "Past medical history",
+          "Medications and allergies",
+          "Examination findings",
+          "Plan and follow-up"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "Fever",
+          "Headache"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you are dealing with a fever (high body temperature) and a headache. We reviewed your health details and your current medicine. Please follow the steps below to take care of yourself.",
+        "what_the_doctor_found": "You have a fever, which means your body temperature is higher than normal, along with a headache (pain in your head).",
+        "medicines": [
+          {
+            "name": "Glycomet",
+            "how_to_take": "500, once (1) daily"
+          }
+        ],
+        "what_to_do": [
+          "Take your medicine as prescribed."
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          null
+        ]
+      },
+      "created_at": "2026-10-02T23:07:08.945678+00:00",
+      "generic_suggestions": [
+        null
+      ]
+    },
+    "dd5Gs6kecXbamw": {
+      "id": "dd5Gs6kecXbamw",
+      "patient_id": "12",
+      "doctor_name": "Nazhwa",
+      "status": "approved",
+      "transcript": "I have fever and headache.",
+      "note": {
+        "allergies": "Not discussed",
+        "assessment": "Fever and headache",
+        "chief_complaint": "Fever and headache",
+        "examination_findings": "Not discussed",
+        "follow_up": "Not discussed",
+        "history_of_present_illness": "Patient presents with fever and headache.",
+        "medications": [
+          {
+            "name": "Glycomet 500",
+            "dose": "",
+            "frequency": ""
+          }
+        ],
+        "missing_information": [
+          "Duration of symptoms",
+          "Severity of symptoms",
+          "Associated symptoms",
+          "Past medical history",
+          "Medications",
+          "Allergies",
+          "Examination findings"
+        ],
+        "past_medical_history": "Not discussed",
+        "plan": [],
+        "symptoms": [
+          "fever",
+          "headache"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because you are dealing with a fever (high body temperature) and a headache (pain in the head). We want to make sure you take your current medicine safely while you rest.",
+        "what_the_doctor_found": "You have a fever and a headache.",
+        "medicines": [
+          {
+            "name": "Glycomet 500",
+            "how_to_take": "Take as directed."
+          }
+        ],
+        "what_to_do": [
+          "Rest and take your prescribed medicine."
+        ],
+        "warning_signs": [],
+        "follow_up": "Not discussed",
+        "generic_suggestions": [
+          {
+            "brand_name": "Glycomet 500",
+            "brand_price": 6.5,
+            "generic_name": "Metformin 500mg Tab",
+            "generic_price": 2.5,
+            "saving_rs": 4.0,
+            "saving_pct": 61.5
+          }
+        ]
+      },
+      "created_at": "2026-10-02T23:09:05.249914+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "Glycomet 500",
+          "brand_price": 6.5,
+          "generic_name": "Metformin 500mg Tab",
+          "generic_price": 2.5,
+          "saving_rs": 4.0,
+          "saving_pct": 61.5
+        }
+      ]
+    }
+  }
+}
