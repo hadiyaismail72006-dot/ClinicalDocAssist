@@ -1,7 +1,11 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+_env_path = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(_env_path):
+    load_dotenv(_env_path)
+else:
+    load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 NOTE_MODEL = os.getenv("NOTE_MODEL", "gemini-3.8-flash")
 if not GEMINI_API_KEY:

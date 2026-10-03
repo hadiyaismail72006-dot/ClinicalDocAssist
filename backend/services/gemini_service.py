@@ -146,4 +146,39 @@ def generate_note_and_summary(transcript: str) -> tuple[dict, dict]:
     )
     if "note" not in result or "summary" not in result:
         raise ValueError(f"Gemini combined response missing keys: {list(result.keys())}")
-    return result["note"], result["summary"]
+    return result["note"], result["summary"]
+
+
+def format_dialogue(raw_transcript: str) -> str:
+    """
+    Format speech transcript into clean Doctor: and Patient: dialogue turns.
+    Returns original text on error or if speaker tags already exist.
+    """
+    if not raw_transcript or not raw_transcript.strip():
+        return raw_transcript
+    if "Doctor:" in raw_transcript or "Patient:" in raw_transcript:
+        return raw_transcript
+
+    prompt = f"""You are a clinical transcription assistant.
+Format the following spoken consultation transcript into clear dialogue lines prefixed with 'Doctor:' or 'Patient:'.
+Rules:
+- Identify speaker based on context (doctor asks questions, prescribes medicines, advises; patient reports symptoms, history).
+- Keep every spoken word faithfully without adding or inventing any facts.
+- Output ONLY the formatted dialogue lines (no code fences, no extra preamble).
+
+Transcript:
+{raw_transcript}"""
+
+    try:
+        resp = client.models.generate_content(
+            model=NOTE_MODEL,
+            contents=prompt,
+        )
+        text = resp.text.strip()
+        if text.startswith("```"):
+            lines = text.split("\n")
+            text = "\n".join(lines[1:-1] if lines[-1].startswith("```") else lines[1:]).strip()
+        return text if text else raw_transcript
+    except Exception as e:
+        logger.warning("[gemini] format_dialogue fallback: %s", e)
+        return raw_transcript

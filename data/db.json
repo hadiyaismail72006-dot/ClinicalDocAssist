@@ -81,6 +81,26 @@
       "patient_id": "122",
       "doctor_id": "111",
       "key_hash": "scrypt:32768:8:1$tUGmLKSWV3hSn6sn$e85fd6a17196230925164a99bccfb00e8b7a452bb66eacfe44b70dfe778cbb59ba0e498ef9992843853e03f4a8dc64f879afaa2dfd0c4781079a9ea48cdebb09"
+    },
+    "566": {
+      "patient_id": "566",
+      "doctor_id": "101",
+      "key_hash": null
+    },
+    "455": {
+      "patient_id": "455",
+      "doctor_id": "101",
+      "key_hash": null
+    },
+    "test-p": {
+      "patient_id": "test-p",
+      "doctor_id": "D101",
+      "key_hash": null
+    },
+    "OP-20458": {
+      "patient_id": "OP-20458",
+      "doctor_id": "D101",
+      "key_hash": "scrypt:32768:8:1$mKjsKhRagjzlzyF6$8a7f98b67ad23067591eafebe15563b09c74e411eeb1411f2770f230bddb3b6ebf81d0b36604cd79f6388c660aaac795ab3e3b9ee5d3586228d3398e7584020f"
     }
   },
   "consultations": {
@@ -1128,6 +1148,159 @@
           "saving_rs": 4.0,
           "saving_pct": 61.5
         }
+      ]
+    },
+    "jSEXTvzgNYOsdQ": {
+      "id": "jSEXTvzgNYOsdQ",
+      "patient_id": "566",
+      "doctor_name": "Aaditi sandeep",
+      "status": "note_generated",
+      "transcript": "I am having fever and headache and vomiting. Did you take any medications? No, I did [ADDRESS].",
+      "note": {
+        "chief_complaint": "Fever, headache, and vomiting",
+        "history_of_present_illness": "Patient presents with fever, headache, and vomiting. No medications have been taken.",
+        "symptoms": [
+          "Fever",
+          "Headache",
+          "Vomiting"
+        ],
+        "past_medical_history": "Not discussed",
+        "medications": [],
+        "allergies": "Not discussed",
+        "examination_findings": "Not discussed",
+        "assessment": "Fever, headache, and vomiting",
+        "plan": [],
+        "follow_up": "Not discussed",
+        "missing_information": [
+          "Duration and severity of symptoms",
+          "Vital signs",
+          "Physical examination results",
+          "Past medical history",
+          "Allergies",
+          "Follow-up plan"
+        ]
+      },
+      "patient_summary": null,
+      "created_at": "2026-10-03T01:16:22.952244+00:00"
+    },
+    "ZCRmXTvbDOlwig": {
+      "id": "ZCRmXTvbDOlwig",
+      "patient_id": "455",
+      "doctor_name": "Aaditi sandeep",
+      "status": "note_generated",
+      "transcript": "I'm having a fever.",
+      "note": {
+        "chief_complaint": "Fever",
+        "history_of_present_illness": "Patient presents reporting a fever.",
+        "symptoms": [
+          "Fever"
+        ],
+        "past_medical_history": "Not discussed",
+        "medications": [],
+        "allergies": "Not discussed",
+        "examination_findings": "Not discussed",
+        "assessment": "Fever",
+        "plan": [],
+        "follow_up": "Not discussed",
+        "missing_information": [
+          "Duration of fever",
+          "Severity of fever",
+          "Associated symptoms",
+          "Past medical history",
+          "Current medications",
+          "Allergies",
+          "Examination findings",
+          "Plan",
+          "Follow-up"
+        ]
+      },
+      "patient_summary": null,
+      "created_at": "2026-10-03T01:17:25.979764+00:00"
+    },
+    "45FiG9EoW7436w": {
+      "id": "45FiG9EoW7436w",
+      "patient_id": "OP-20458",
+      "doctor_name": "Dr. Sarah",
+      "status": "approved",
+      "transcript": "Doctor: Good morning, what brings you in today?\nPatient: I have had stomach pain in my lower belly since this morning, after eating outside food yesterday.\nDoctor: Any vomiting or fever?\nPatient: No vomiting, a little fever last night. I am allergic to penicillin. [NAME] [BANK].\nDoctor: Let me examine you. The abdomen is tender on the lower right side but soft.\nDoctor: I will prescribe paracetamol 500 mg twice a day for three days, and ORS after each loose stool. Avoid outside food.\nDoctor: Come back in three days, or earlier if the pain gets worse or you have a high fever.",
+      "note": {
+        "chief_complaint": "Stomach pain",
+        "history_of_present_illness": "Patient presents with stomach pain in the lower belly since this morning, after eating outside food yesterday. Reports a little fever last night and denies vomiting.",
+        "symptoms": [
+          "stomach pain in lower belly",
+          "fever"
+        ],
+        "past_medical_history": "Not discussed",
+        "medications": [
+          {
+            "name": "paracetamol",
+            "dose": "500 mg",
+            "frequency": "twice a day for three days"
+          },
+          {
+            "name": "ORS",
+            "dose": "Not discussed",
+            "frequency": "after each loose stool"
+          }
+        ],
+        "allergies": "Penicillin",
+        "examination_findings": "Abdomen is tender on the lower right side but soft.",
+        "assessment": "Not discussed",
+        "plan": [
+          "Prescribe paracetamol 500 mg twice a day for three days",
+          "Prescribe ORS after each loose stool",
+          "Avoid outside food"
+        ],
+        "follow_up": "Come back in three days, or earlier if the pain gets worse or you have a high fever.",
+        "missing_information": [
+          "[NAME] and [BANK] tokens present in transcript with unclear context"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because of lower belly pain and a mild fever that started after eating outside food. We want you to rest and take your medicines to help you feel better soon. Please remember to stay away from outside food for now.",
+        "what_the_doctor_found": "Your lower belly was tender, meaning it felt a bit sore when pressed, but your stomach was soft.",
+        "medicines": [
+          {
+            "name": "paracetamol 500 mg",
+            "how_to_take": "Twice a day for three days"
+          },
+          {
+            "name": "ORS",
+            "how_to_take": "After each loose stool"
+          }
+        ],
+        "what_to_do": [
+          "Take your prescribed medicines as directed",
+          "Avoid outside food"
+        ],
+        "warning_signs": [
+          "Pain gets worse",
+          "High fever"
+        ],
+        "follow_up": "Come back in three days, or earlier if your pain gets worse or you have a high fever.",
+        "generic_suggestions": [
+          {
+            "brand_name": "paracetamol 500 mg",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          },
+          null
+        ]
+      },
+      "created_at": "2026-10-03T01:33:54.289131+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "paracetamol 500 mg",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        },
+        null
       ]
     }
   }

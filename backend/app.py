@@ -322,8 +322,15 @@ def _run_audio_pipeline(jid: str, cid: str, src_path: str):
             return
         logger.info("[TIMING] transcription=%.2fs", time.perf_counter() - t0)
 
+        _set_job(jid, step="Formatting dialogue...")
+        try:
+            formatted_text = gs.format_dialogue(raw_text)
+        except Exception as ex:
+            logger.warning("[job %s] Dialogue formatting fallback: %s", jid, ex)
+            formatted_text = raw_text
+
         _set_job(jid, step="Scrubbing sensitive data...")
-        text = scrub_service.scrub(raw_text)
+        text = scrub_service.scrub(formatted_text)
 
         _set_job(jid, step="Saving transcript...")
         result = store.update(cid, transcript=text, status="transcribed")

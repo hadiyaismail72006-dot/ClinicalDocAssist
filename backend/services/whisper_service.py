@@ -25,13 +25,18 @@ from faster_whisper import WhisperModel
 logger = logging.getLogger(__name__)
 
 # ── Load model ONCE at import time ──────────────────────────────────────────
-# Use WHISPER_MODEL env-var to override (e.g. "tiny.en" / "base.en" / "small").
-# Default: base.en – good English accuracy, ~3x faster than small on CPU.
-_MODEL_NAME = os.getenv("WHISPER_MODEL", "base.en")
+# Use WHISPER_MODEL env-var to override (e.g. "small" / "base.en" / "tiny").
+# Default: small – multilingual, much higher accuracy for medical/accented speech.
+_MODEL_NAME = os.getenv("WHISPER_MODEL", "small")
 
 _t0 = time.perf_counter()
 logger.info("[whisper] Loading model '%s' ...", _MODEL_NAME)
-_model = WhisperModel(_MODEL_NAME, device="cpu", compute_type="int8")
+try:
+    _model = WhisperModel(_MODEL_NAME, device="cpu", compute_type="int8")
+except Exception as ex:
+    logger.warning("[whisper] Failed to load %s (%s), falling back to base.en", _MODEL_NAME, ex)
+    _MODEL_NAME = "base.en"
+    _model = WhisperModel(_MODEL_NAME, device="cpu", compute_type="int8")
 logger.info("[whisper] Model loaded in %.1f s", time.perf_counter() - _t0)
 
 MEDICAL_HINT = (
@@ -82,7 +87,7 @@ def transcribe_path(path: str) -> str:
     """
     Transcribe an audio file.
     1. Converts to 16 kHz mono WAV (fast, in-process).
-    2. Runs faster-whisper with beam_size=1 + VAD.
+    2. Runs faster-whisper with beam_size=3 + VAD.
     Returns plain text.
     """
     wav_path = None
@@ -94,12 +99,11 @@ def transcribe_path(path: str) -> str:
         t1 = time.perf_counter()
         segments, info = _model.transcribe(
             wav_path,
-            beam_size=1,           # greedy – fastest
-            vad_filter=True,       # skip silence
-            language="en",         # English only – skip language detection
+            beam_size=3,
+            vad_filter=True,
             initial_prompt=MEDICAL_HINT,
         )
-        text = " ".join(s.text.strip() for s in segments).strip()
+        text = " ".join(s.text.strip() for s in segments if s.text.strip()).strip()
         logger.info(
             "[TIMING] transcription=%.2fs (lang=%s, audio_dur=%.1fs)",
             time.perf_counter() - t1,

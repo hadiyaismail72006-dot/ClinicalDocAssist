@@ -70,14 +70,16 @@ AGE = _c(
 # Indian PIN code: 6-digit number preceded by pin/pincode/zip keyword (with optional "is")
 PINCODE   = _c(r"\b(?:pin(?:\s*code)?|zip)\s*(?:is\s*)?[:\-]?\s*\d{6}\b")
 
-# MR / OP / UHID / registration number
+# MR / OP / UHID / registration number (requires no/num/number/# or explicit ID keyword)
 ID_NUM    = _c(
-    r"\b(?:mr|op|uhid|patient\s*id|reg(?:istration)?|admission|case)\s*(?:no|num(?:ber)?)?\s*[:\-]?\s*[\w\-\/]{2,20}\b"
+    r"\b(?:mr|op|uhid|patient\s*id|reg(?:istration)?|admission|case)\s*(?:no|num(?:ber)?|#)\s*[:\-]?\s*[\w\-\/]{2,20}\b"
+    r"|\b(?:uhid|patient\s*id)\s*[:\-]?\s*[\w\-\/]{2,20}\b"
 )
 
 # Street address: flat/house/door/plot followed by number, or known street words
 ADDRESS   = _c(
-    r"\b(?:flat|house|door|plot|shop|block|room|apt|apartment|unit|no\.?|#)\s*[\w\-\/]+"
+    r"\b(?:flat|house|door|plot|shop|block|room|apt|apartment|unit)\b\s*(?:no\.?\s*)?[\w\-\/]+"
+    r"|\b(?:no|#)\.\s*\d+[\w\-\/]*"
     r"|\d+[A-Za-z]?\s*,?\s*[\w\s]{1,30}"
     r"(?:street|st\b|road|rd\b|avenue|ave\b|lane|nagar|colony|layout|phase|sector|cross|main|marg|bypass)\b"
 )
@@ -85,7 +87,7 @@ ADDRESS   = _c(
 # Name introductions: only match when followed by a properly-capitalised name
 # (first letter uppercase, not an all-caps abbreviation)
 NAME = _c(
-    r"(?:my\s+name\s+is|patient(?:\s+name)?\s*(?:is|:)|call\s+me)\s+"
+    r"(?:my\s+name\s+is|patient\s+name\s*(?:is|:)|call\s+me)\s+"
     r"([A-Z][a-z]{1,}(?:\s+[A-Z][a-z]{1,}){0,3})"
 )
 
