@@ -644,6 +644,22 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 20px 0; }
   .ja-modal { max-width: 100%; }
 }
 
+/* ── Privacy Data Masking Tag ─────────────────────────────────── */
+.privacy-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: hsl(215, 30%, 93%);
+  color: hsl(215, 55%, 32%);
+  border: 1px solid hsl(215, 35%, 82%);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
 /* ── Print ───────────────────────────────────────────────────────── */
 @media print {
   .no-print, .top { display: none !important; }

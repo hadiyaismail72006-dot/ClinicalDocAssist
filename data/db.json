@@ -1465,6 +1465,184 @@
       },
       "created_at": "2026-10-03T04:22:39.114566+00:00",
       "generic_suggestions": []
+    },
+    "8nfzTJPhg-LGAw": {
+      "id": "8nfzTJPhg-LGAw",
+      "patient_id": "12",
+      "doctor_name": "Nazhwa",
+      "status": "note_generated",
+      "transcript": "Patient: Hello doctor.\nDoctor: Yes, what is your problem?\nPatient: I am suffering from severe stomach pain since yesterday.\nDoctor: Okay, I will subscribe you paracetamol and take rest and drink plenty of water.\nPatient: Okay doctor, thank you.",
+      "note": {
+        "chief_complaint": "Severe stomach pain",
+        "history_of_present_illness": "Patient reports suffering from severe stomach pain starting since yesterday.",
+        "symptoms": [
+          "Severe stomach pain"
+        ],
+        "past_medical_history": "Not discussed",
+        "medications": [
+          {
+            "name": "Paracetamol",
+            "dose": "Not discussed",
+            "frequency": "Not discussed"
+          }
+        ],
+        "allergies": "Not discussed",
+        "examination_findings": "Not discussed",
+        "assessment": "Not discussed",
+        "plan": [
+          "Prescribe paracetamol",
+          "Take rest",
+          "Drink plenty of water"
+        ],
+        "follow_up": "Not discussed",
+        "missing_information": []
+      },
+      "patient_summary": null,
+      "created_at": "2026-10-03T04:41:55.146710+00:00"
+    },
+    "zu-0WA5QWTdCrg": {
+      "id": "zu-0WA5QWTdCrg",
+      "patient_id": "OP-20458",
+      "doctor_name": "Dr. Sarah",
+      "status": "approved",
+      "transcript": "Doctor: Good morning, what brings you in today?\nPatient: I have had stomach pain in my lower belly since this morning, after eating outside food yesterday.\nDoctor: Any vomiting or fever?\nPatient: No vomiting, a little fever last night. I am allergic to penicillin. [NAME] [BANK].\nDoctor: Let me examine you. The abdomen is tender on the lower right side but soft.\nDoctor: I will prescribe paracetamol 500 mg twice a day for three days, and ORS after each loose stool. Avoid outside food.\nDoctor: Come back in three days, or earlier if the pain gets worse or you have a high fever.",
+      "note": {
+        "chief_complaint": "Stomach pain in lower belly",
+        "history_of_present_illness": "Patient presents with stomach pain in the lower belly starting this morning, following outside food consumption yesterday. Patient reports a little fever last night and no vomiting.",
+        "symptoms": [
+          "Stomach pain",
+          "Fever"
+        ],
+        "past_medical_history": "Not discussed",
+        "medications": [
+          {
+            "name": "paracetamol",
+            "dose": "500 mg",
+            "frequency": "twice a day for three days"
+          }
+        ],
+        "allergies": "Penicillin",
+        "examination_findings": "Abdomen is tender on the lower right side but soft.",
+        "assessment": "Not discussed",
+        "plan": [
+          "Prescribe paracetamol 500 mg twice a day for three days",
+          "Prescribe ORS after each loose stool",
+          "Avoid outside food"
+        ],
+        "follow_up": "Come back in three days, or earlier if the pain gets worse or you have a high fever.",
+        "missing_information": [
+          "Unclear speaker for [NAME] [BANK]"
+        ]
+      },
+      "patient_summary": {
+        "summary": "You came in today because of lower belly pain and a mild fever that started after eating outside food. We checked your belly and found it a bit tender on the lower right side. You are given a simple plan to help you feel better soon.",
+        "what_the_doctor_found": "Your lower belly was a bit tender (sensitive to touch) on the right side, but your belly was soft.",
+        "medicines": [
+          {
+            "name": "paracetamol 500 mg",
+            "how_to_take": "Twice a day for three days"
+          },
+          {
+            "name": "ORS (Oral Rehydration Salts)",
+            "how_to_take": "After each loose stool"
+          }
+        ],
+        "what_to_do": [
+          "Take your medicines as directed",
+          "Avoid outside food"
+        ],
+        "warning_signs": [
+          "Pain gets worse",
+          "High fever"
+        ],
+        "follow_up": "Come back in three days, or earlier if your pain gets worse or you have a high fever.",
+        "generic_suggestions": [
+          {
+            "brand_name": "paracetamol 500 mg",
+            "brand_price": 2.5,
+            "generic_name": "Paracetamol 500mg Tab",
+            "generic_price": 1.5,
+            "saving_rs": 1.0,
+            "saving_pct": 40.0
+          },
+          null
+        ]
+      },
+      "created_at": "2026-10-03T06:15:34.980614+00:00",
+      "generic_suggestions": [
+        {
+          "brand_name": "paracetamol 500 mg",
+          "brand_price": 2.5,
+          "generic_name": "Paracetamol 500mg Tab",
+          "generic_price": 1.5,
+          "saving_rs": 1.0,
+          "saving_pct": 40.0
+        },
+        null
+      ]
+    },
+    "60GNhof0BiYRWw": {
+      "id": "60GNhof0BiYRWw",
+      "patient_id": "OP-20458",
+      "doctor_name": "Dr. Sarah",
+      "status": "note_generated",
+      "transcript": "Doctor: Good morning, what brings you in today?\nPatient: I have had stomach pain in my lower belly since this morning, after eating outside food yesterday.\nDoctor: Any vomiting or fever?\nPatient: No vomiting, a little fever last night. I am allergic to penicillin. Call me on [patient's phone].\nDoctor: Let me examine you. The abdomen is tender on the lower right side but soft.\nDoctor: I will prescribe paracetamol 500 mg twice a day for three days, and ORS after each loose stool. Avoid outside food.\nDoctor: Come back in three days, or earlier if the pain gets worse or you have a high fever.",
+      "note": {
+        "chief_complaint": "Stomach pain in lower belly since this morning",
+        "history_of_present_illness": "Patient presents with stomach pain in the lower belly starting this morning, following outside food consumption yesterday. Experienced a little fever last night. Denies vomiting.",
+        "symptoms": [
+          "Stomach pain in lower belly",
+          "Fever"
+        ],
+        "past_medical_history": "Not discussed",
+        "medications": [
+          {
+            "name": "paracetamol",
+            "dose": "500 mg",
+            "frequency": "twice a day for three days"
+          },
+          {
+            "name": "ORS",
+            "dose": "Not discussed",
+            "frequency": "after each loose stool"
+          }
+        ],
+        "allergies": "Penicillin",
+        "examination_findings": "Abdomen is tender on the lower right side but soft.",
+        "assessment": "Not discussed",
+        "plan": [
+          "Prescribe paracetamol 500 mg twice a day for three days",
+          "Prescribe ORS after each loose stool",
+          "Avoid outside food"
+        ],
+        "follow_up": "Come back in three days, or earlier if the pain gets worse or you have a high fever.",
+        "missing_information": [
+          "Patient's phone number placeholder mentioned in transcript",
+          "Specific diagnosis"
+        ]
+      },
+      "patient_summary": null,
+      "created_at": "2026-10-03T06:17:05.663532+00:00"
+    },
+    "PoILvUdyuqJvsw": {
+      "id": "PoILvUdyuqJvsw",
+      "patient_id": "OP-20458",
+      "doctor_name": "Dr. Sarah",
+      "status": "transcribed",
+      "transcript": "Doctor: Hello, what is your name?\nPatient: Hello Doctor, my name is [patient's name], and my brother Arjun Sharma accompanied me. My phone is [patient's phone] and my email is [patient's email].\nDoctor: Welcome, Priya. What symptoms are you experiencing?\nPatient: I have acute bronchitis and high fever.\nDoctor: I will prescribe Amoxicillin 500mg and Paracetamol 650mg.",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-03T06:18:19.201983+00:00"
+    },
+    "suzVDlCDgIysaA": {
+      "id": "suzVDlCDgIysaA",
+      "patient_id": "OP-20458",
+      "doctor_name": "Dr. Sarah",
+      "status": "transcribed",
+      "transcript": "Doctor: Hello, what is your name?\nPatient: Hello Doctor, my name is [patient's name], and my brother [patient's name] accompanied me. My phone is [patient's phone] and my email is [patient's email].\nDoctor: Welcome, [patient's name]. What symptoms are you experiencing?\nPatient: I have acute bronchitis and high fever.\nDoctor: I will prescribe Amoxicillin 500mg and Paracetamol 650mg.",
+      "note": null,
+      "patient_summary": null,
+      "created_at": "2026-10-03T06:20:37.170916+00:00"
     }
   }
 }

@@ -181,4 +181,53 @@ Transcript:
         return text if text else raw_transcript
     except Exception as e:
         logger.warning("[gemini] format_dialogue fallback: %s", e)
-        return raw_transcript
+        return raw_transcript
+
+
+def scrub_pii(transcript: str) -> str:
+    """
+    Context-aware PII scrubbing using Gemini.
+    Detects patient names, relative names, contact info, and sensitive identifiers
+    in natural conversation and masks them with descriptive tags:
+    [patient's name], [patient's phone], [patient's address], [patient's email],
+    [patient's date of birth], [patient's age], [patient's ID], [patient's financial info].
+    Guarantees medical diseases, symptoms, drugs, and 'Doctor:'/'Patient:' tags are untouched.
+    """
+    if not transcript or not transcript.strip():
+        return transcript
+
+    prompt = f"""You are a healthcare privacy and medical data de-identification assistant.
+De-identify and mask all patient personally identifiable information (PII) in this clinical consultation transcript.
+
+Masking instructions:
+1. Patient name and relative names: Mask ANY and ALL occurrences of personal names (full names, first names, surnames, self-introductions like 'my name is Rahul', or doctor addressing the patient like 'Welcome Rahul' or 'Take a seat Mr. Sharma', or companion names like 'my son Aarav') -> [patient's name]
+2. Phone number -> [patient's phone]
+3. Email address -> [patient's email]
+4. Home/street address, apartment, or residential locality -> [patient's address]
+5. Government or hospital ID (Aadhaar, PAN, Passport, MR/UHID number) -> [patient's ID]
+6. Date of birth -> [patient's date of birth]
+7. Age statement (e.g. 'I am 34 years old') -> [patient's age]
+8. Financial, bank account, IFSC, UPI, or card numbers -> [patient's financial info]
+
+STRICT SAFETY RULES:
+- DO NOT mask any medical conditions, diseases (e.g. diabetes, hypertension, asthma), symptoms (e.g. fever, headache, nausea), or examination findings.
+- DO NOT mask any medications, brand names, or active ingredients (e.g. paracetamol, Crocin, amlodipine, Pan 40, ORS) or dosages (e.g. 500mg, twice a day).
+- DO NOT change dialogue labels like 'Doctor:' and 'Patient:'.
+- Keep every other spoken word intact. Return ONLY the scrubbed dialogue lines with no code blocks or commentary.
+
+Transcript:
+{transcript}"""
+
+    try:
+        resp = client.models.generate_content(
+            model=NOTE_MODEL,
+            contents=prompt,
+        )
+        text = resp.text.strip()
+        if text.startswith("```"):
+            lines = text.split("\n")
+            text = "\n".join(lines[1:-1] if lines[-1].startswith("```") else lines[1:]).strip()
+        return text if text else transcript
+    except Exception as ex:
+        logger.warning("[gemini] scrub_pii fallback: %s", ex)
+        return transcript

@@ -51,12 +51,14 @@ function confirmBox(title, text, okLabel, danger) {
   });
 }
 
-// Turns "Doctor: ...\nPatient: ..." into readable lines (never raw JSON).
+// Turns "Doctor: ...\nPatient: ..." into readable lines with privacy badges.
 function transcriptHtml(t) {
   if (!t) return '<p class="muted">No transcript yet.</p>';
   return String(t).split("\n").filter(l => l.trim()).map(l => {
     const m = l.match(/^(Doctor|Patient):\s*(.*)$/i);
-    return m ? `<div class="line"><b class="${m[1][0].toUpperCase()}">${esc(m[1])}:</b> ${esc(m[2])}</div>` : `<div class="line">${esc(l)}</div>`;
+    const rawContent = m ? m[2] : l;
+    const content = esc(rawContent).replace(/\[patient&#39;s [^\]]+\]|\[patient's [^\]]+\]|\[patient [^\]]+\]/gi, match => `<span class="privacy-tag">🔒 ${match}</span>`);
+    return m ? `<div class="line"><b class="${m[1][0].toUpperCase()}">${esc(m[1])}:</b> ${content}</div>` : `<div class="line">${content}</div>`;
   }).join("");
 }
 

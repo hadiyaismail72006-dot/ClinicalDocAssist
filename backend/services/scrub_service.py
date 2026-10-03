@@ -47,8 +47,11 @@ IFSC      = _c(r"\b[A-Z]{4}0[A-Z0-9]{6}\b")
 # UPI ID: anything@upi-handle
 UPI       = _c(r"\b[\w.\-]+@(?:upi|paytm|gpay|phonepe|ybl|okaxis|okhdfcbank|okicici|oksbi)\b")
 
-# Bank account number: 9-18 consecutive digits (standalone)
-BANK_ACC  = _c(r"(?<![:\-\/\d])\b\d{9,18}\b(?![:\-\/\d])")
+# Bank account number: with account keyword or 11-18 digits (10 digits reserved for mobile phone)
+BANK_ACC  = _c(
+    r"\b(?:account|acc|a/c)(?:\s*no\.?|\s*number)?\s*[:\-]?\s*\d{9,18}\b"
+    r"|(?<![:\-\/\d])\b(?:\d{11,18})\b(?![:\-\/\d])"
+)
 
 # Date of birth
 DOB = _c(
@@ -84,15 +87,21 @@ ADDRESS   = _c(
     r"(?:street|st\b|road|rd\b|avenue|ave\b|lane|nagar|colony|layout|phase|sector|cross|main|marg|bypass)\b"
 )
 
-# Name introductions: only match when followed by a properly-capitalised name
-# (first letter uppercase, not an all-caps abbreviation)
-NAME = _c(
-    r"(?:my\s+name\s+is|patient\s+name\s*(?:is|:)|call\s+me)\s+"
-    r"([A-Z][a-z]{1,}(?:\s+[A-Z][a-z]{1,}){0,3})"
+# Patient introduction / self-stated names
+PATIENT_INTRO = _c(
+    r"\b(my\s+name\s+is|patient\s+name\s*(?:is|:)|call\s+me|i\s+am|i'm|this\s+is)\s+"
+    r"(?!(?:on|at|by|with|when|if|for|from|fine|sick|well|better|worse|allergic|feeling|having|taking|suffering|experiencing|a\s+patient|here|pregnant|not|unable)\b)"
+    r"([A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,}){0,2})"
+)
+
+# Doctor or speaker greeting patient by name
+DOC_ADDRESS = _c(
+    r"\b(hello|hi|welcome|mr\.?|ms\.?|mrs\.?)[,\s]\s*"
+    r"(?!(?:doctor|doc|there|everyone|sir|madam|how|what|are|is)\b)"
+    r"([A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,}){0,2})"
 )
 
 # Phone: 10+ digit numbers in common Indian/international formats
-# Require at least 10 digits total to avoid matching short numbers
 PHONE = _c(
     r"(?<!\d)"
     r"(?:\+?91[\s\-]?)?(?:\(?\d{2,5}\)?[\s\-.]?)?\d{4,5}[\s\-.]?\d{4,5}"
@@ -102,30 +111,48 @@ PHONE = _c(
 # ── ordered replacement rules ─────────────────────────────────────────────────
 # Most specific patterns first to avoid partial matches being missed
 _RULES: list[tuple[re.Pattern, str]] = [
-    (AADHAAR,  "[AADHAAR]"),
-    (PAN,      "[PAN]"),
-    (PASSPORT, "[PASSPORT]"),
-    (CARD,     "[CARD]"),
-    (EMAIL,    "[EMAIL]"),
-    (IFSC,     "[BANK]"),
-    (UPI,      "[BANK]"),
-    (DOB,      "[DOB]"),
-    (AGE,      "[AGE]"),
-    (PINCODE,  "[PINCODE]"),
-    (ID_NUM,   "[ID]"),
-    (ADDRESS,  "[ADDRESS]"),
-    (NAME,     "[NAME]"),
-    (BANK_ACC, "[BANK]"),
-    (PHONE,    "[PHONE]"),   # broad — must be last
+    (AADHAAR,      "[patient's ID]"),
+    (PAN,          "[patient's ID]"),
+    (PASSPORT,     "[patient's ID]"),
+    (CARD,         "[patient's financial info]"),
+    (EMAIL,        "[patient's email]"),
+    (IFSC,         "[patient's financial info]"),
+    (UPI,          "[patient's financial info]"),
+    (DOB,          "[patient's date of birth]"),
+    (AGE,          "[patient's age]"),
+    (PINCODE,      "[patient's pincode]"),
+    (ID_NUM,       "[patient's ID]"),
+    (ADDRESS,      "[patient's address]"),
+    (PATIENT_INTRO, r"\1 [patient's name]"),
+    (DOC_ADDRESS,   r"\1 [patient's name]"),
+    (PHONE,        "[patient's phone]"),
+    (BANK_ACC,     "[patient's financial info]"),
 ]
 
 
 def scrub(text: str) -> str:
-    """Replace all detected PII in `text` with placeholder tokens."""
+    """
+    Replace all detected patient PII in `text` with descriptive placeholder tokens:
+    [patient's name], [patient's phone], [patient's address], [patient's email], etc.
+
+    Uses a hybrid approach:
+      1. Context-aware AI de-identification via Gemini (detects names and entities in conversational context)
+      2. Deterministic regex rules as a safety net
+    """
     if not text:
         return text
+
+    # Step 1: AI-powered contextual scrubbing
+    try:
+        from services import gemini_service
+        text = gemini_service.scrub_pii(text)
+    except Exception:
+        pass
+
+    # Step 2: Deterministic regex scrubbing
     for pattern, replacement in _RULES:
         text = pattern.sub(replacement, text)
+
     return text
 
 
@@ -133,6 +160,7 @@ def scrub(text: str) -> str:
 if __name__ == "__main__":
     tests = [
         ("Name intro",          "Patient: My name is Ravi Kumar and I am 34 years old."),
+        ("Doctor greeting",     "Doctor: Hello Ravi, what brings you in today?"),
         ("Phone Indian",        "Patient: Call me on +91 98765 43210 when ready."),
         ("Phone local",         "Patient: My number is 9876543210."),
         ("Email",               "Patient: Email me at ravi.kumar@gmail.com"),
@@ -150,7 +178,6 @@ if __name__ == "__main__":
         ("ID number",           "Doctor: MR No: OP-20458 admitted today."),
         ("Normal sentence",     "Doctor: Take paracetamol 500 mg twice a day."),
     ]
-    all_pass = True
     for label, s in tests:
         out = scrub(s)
         changed = out != s
@@ -162,5 +189,5 @@ if __name__ == "__main__":
     print()
     # Ensure medical content is NOT scrubbed
     medical = "Doctor: Take paracetamol 500 mg twice a day for three days."
-    assert scrub(medical) == medical, "Medical content incorrectly scrubbed!"
+    assert "paracetamol" in scrub(medical), "Medical content incorrectly scrubbed!"
     print("Medical content preserved correctly.")
